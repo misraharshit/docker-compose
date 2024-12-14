@@ -1,0 +1,14 @@
+services:
+  first-app:
+    image: harshit1023/docker-challenge-harshit:hive
+    container_name: first_app
+    ports:
+      - "80:80"
+  second-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: second_app
+    ports:
+      - "5050:5050"
+
